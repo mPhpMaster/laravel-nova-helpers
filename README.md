@@ -1,6 +1,6 @@
 # Laravel Nova Helpers
 ###### Part of mphpmaster/laravel-helpers:^3
-<small>v1.0.0</small>
+<small>v1.1.0</small>
 
 ## Dependencies:
 * php >=8.1 **REQUIRED IN YOUR PROJECT**
