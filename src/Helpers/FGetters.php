@@ -3,10 +3,10 @@
  * Copyright © 2023. mPhpMaster(https://github.com/mPhpMaster) All rights reserved.
  */
 
- if( !function_exists('getNovaRequest') ) {
+if( !function_exists('getNovaRequest') ) {
     /**
      * Returns NovaRequest object.
-     * 
+     *
      * @return \Illuminate\Contracts\Foundation\Application|\Laravel\Nova\Http\Requests\NovaRequest|mixed
      */
     function getNovaRequest()
@@ -15,10 +15,10 @@
     }
 }
 
- if( !function_exists('getNovaResourceId') ) {
+if( !function_exists('getNovaResourceId') ) {
     /**
      * Get $request->resourceId value
-     * 
+     *
      * @param \Illuminate\Http\Request|null $request
      *
      * @return int|double|string|mixed|null

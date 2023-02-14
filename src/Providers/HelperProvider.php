@@ -1,4 +1,6 @@
-<?php /** @noinspection PhpIllegalPsrClassPathInspection */
+<?php
+/** @noinspection PhpIllegalPsrClassPathInspection */
+
 /*
  * Copyright © 2023. mPhpMaster(https://github.com/mPhpMaster) All rights reserved.
  */
@@ -17,11 +19,6 @@ use Illuminate\Support\ServiceProvider;
  */
 class HelperProvider extends ServiceProvider
 {
-    public function register()
-    {
-        // $this->registerMacros();
-    }
-
     /**
      * Bootstrap services.
      *
@@ -48,7 +45,7 @@ class HelperProvider extends ServiceProvider
      */
     public function registerMacros()
     {
-        
+
     }
 
     /**
@@ -57,5 +54,10 @@ class HelperProvider extends ServiceProvider
     public function provides()
     {
         return [];
+    }
+
+    public function register()
+    {
+        // $this->registerMacros();
     }
 }

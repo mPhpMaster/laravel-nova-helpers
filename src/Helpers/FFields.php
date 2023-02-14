@@ -3,14 +3,14 @@
  * Copyright © 2023. mPhpMaster(https://github.com/mPhpMaster) All rights reserved.
  */
 
- if( !function_exists('HiddenField') ) {
+if( !function_exists('HiddenField') ) {
     /**
      * @param string|\Closure     $attribute
      * @param \Closure|mixed|null $value
      *
      * @return \Laravel\Nova\Fields\Hidden
      */
-    function HiddenField($attribute, $value = null)
+    function HiddenField($attribute, $value = null): \Laravel\Nova\Fields\Hidden
     {
         return \Laravel\Nova\Fields\Hidden::make($attribute = value($attribute), $attribute)->withMeta([ 'value' => value($value) ]);
     }

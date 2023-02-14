@@ -3,17 +3,19 @@
  * Copyright © 2023. mPhpMaster(https://github.com/mPhpMaster) All rights reserved.
  */
 
- if( !function_exists('toCollect') ) {
+if( !function_exists('toCollect') ) {
     /**
-     * Returns $var as collection if it wasn't collection
+     * Create a new collection from the given value if its wasn't collection.
      *
-     * @param mixed $var
+     * @param mixed $value
      *
      * @return \Illuminate\Support\Collection
      */
-    function toCollect($var): \Illuminate\Support\Collection
+    function toCollect($value = null): \Illuminate\Support\Collection
     {
-        return is_collection($var) ? $var : collect($var);
+        $value = isModel($value) ? [ $value ] : $value;
+
+        return is_collection($value) ? $value : collect($value);
     }
 }
 
