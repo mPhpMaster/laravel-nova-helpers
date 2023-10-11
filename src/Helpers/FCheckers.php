@@ -13,10 +13,14 @@ if( !function_exists('isCurrentResource') ) {
      */
     function isCurrentResource(string $resource): bool
     {
-        return ($currentResource = request('view')) &&
-            class_exists($resource) &&
-            method_exists($resource, 'uriKey') &&
-            $currentResource === 'resources/' . $resource::uriKey();
+		return ($currentResource = \request()?->route('resource')) &&
+			(
+				(class_exists($resource) &&
+					method_exists($resource, 'uriKey') &&
+					$currentResource === $resource::uriKey())
+				||
+				$currentResource === $resource
+			);
     }
 }
 
